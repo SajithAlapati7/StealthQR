@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { motion } from 'framer-motion';
-import { IoClose } from 'react-icons/io5';
 import './Project.css';
 
 Modal.setAppElement('#root');
@@ -50,8 +49,8 @@ const FeatureBox = ({ title, content }) => {
             initial="initial"
             animate="animate"
             exit="exit"
-          >
-            <IoClose className="close-icon" onClick={closeModal} />
+            >
+            <button className="close-button" onClick={closeModal}>Close</button>
             <h2>{title}</h2>
             <p>{content}</p>
           </motion.div>

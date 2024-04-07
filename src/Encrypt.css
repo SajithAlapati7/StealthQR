@@ -110,6 +110,11 @@
     right: 10px;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
+    background-color: #61dafb;
+    border: none;
+    font-weight: bold;
+    color: white;
 }
 
 /* Style for download button */

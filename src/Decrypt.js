@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import jsQR from 'jsqr';
 import Modal from 'react-modal';
-import { IoMdClose } from 'react-icons/io';
 import CryptoJS from 'crypto-js';
 import './Decrypt.css';
 
@@ -102,8 +101,7 @@ const Decrypt = () => {
         onRequestClose={closeModal}
         className="Modal"
         overlayClassName="Overlay"
-      >
-        <IoMdClose className="close-icon" onClick={closeModal} />
+      ><button className="close-button" onClick={closeModal}>Close</button>
         {decryptError && <p className="error">{decryptError}</p>}
         {!decryptError && data && (
           <div className="decrypted-data">

@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import QRCode  from 'qrcode.react';
 import CryptoJS from 'crypto-js';
 import Modal from 'react-modal';
-import { IoMdClose } from 'react-icons/io';
 import './Encrypt.css';
 
 Modal.setAppElement('#root');
@@ -59,7 +58,7 @@ const Encrypt = () => {
         className="Modal"
         overlayClassName="Overlay"
       >
-        <IoMdClose className="close-icon" onClick={closeModal} />
+        <button className="close-button" onClick={closeModal}>Close</button>
         <div className="qr-container" ref={qrRef}>
           <QRCode value={qrValue} size={256} level="H" />
         </div>
